@@ -106,7 +106,7 @@ P {
 .intro-inner {
     
     width: 100%;
-    min-width: 970px;
+    min-width: 967px;
     margin: 0 auto;
     vertical-align: center;
 }
@@ -245,11 +245,13 @@ P {
 }
 
 .works-photo {
+    min-width: 100%;
     position: absolute;
     left: 50%;
     top: 50%;
     z-index: 111;
     transform: translate3d(-50%, -50%, 0);
+
 }
 
 .works-content {
@@ -308,7 +310,7 @@ P {
 .team-inner {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
    
     
@@ -607,3 +609,172 @@ input:focus {
     border: 2px solid #555;
     width: 100%;
 }
+
+
+
+
+
+
+/*Burger
+--------------- */
+
+.burger {
+    
+    padding: 15px 0;
+    display: none;
+    
+    border: 0;
+    cursor: pointer;
+    background-color: transparent;
+
+}
+
+.burger-item {
+    display: block;
+    width: 28px;
+    height: 3px;
+    margin-bottom: 5px ;
+
+    background-color: #fff;
+
+    font-size: 0;
+    color: transparent;
+
+    position: relative;
+}
+
+.burger-item::before,
+.burger-item::after {
+    content:"";
+    width: 100%;
+    height: 100%;
+    background-color: #FFF;
+    position: absolute;
+
+    left: 0;
+    z-index: 1;
+}
+
+.burger-item::before {
+    top: -8px;
+}
+
+.burger-item::after {
+    bottom:  -8px;
+}
+
+
+/*--Media
+------------------------------*/
+@media ( max-width: 1300px) {
+    .works-item {
+        width: 50%;
+
+    }
+}
+
+
+
+
+@media ( max-width: 991px) {
+    
+/*Header*/
+
+   .header-inner {
+        padding: 20px 60px;
+   }
+
+
+    .nav {
+        display: none;
+    }
+/*Intro*/
+
+    .intro-title {
+        font-size: 40px;
+    }
+
+    .intro-subtitle {
+        font-size: 20px;
+    }
+
+/*Burger*/
+    
+    .burger {
+        display: block;
+    }
+
+/*Features*/
+
+    .features-item {
+        width: 50%;
+    }
+
+    /*Team*/
+
+    .team {
+        padding: 100px 30px;
+    }
+
+    .team-item {
+        width: 40%;
+        margin: 20px 0px;
+    }
+
+
+}
+
+@media ( max-width: 767px) {
+    .intro {
+        height: auto;
+        padding-top: 130px;
+        padding-bottom: 30px;
+
+    }
+    .intro-title {
+        font-size: 40px;
+    }
+
+
+    .intro-subtitle {
+        font-size: 16px;
+    }
+
+    .burger {
+        display: block;
+    }
+
+
+    .features {
+        margin: 40px 0;
+    }
+
+    .features-item {
+        width: 100%;
+    }
+
+    .works-item {
+        width: 100%;
+        height: 300px;
+
+    }
+
+
+    .team-item {
+        width: 100%;
+    }
+
+    .team-photo {
+        max-width: 100px;
+    }
+}
+
+
+
+    
+
+
+   
+
+
+
